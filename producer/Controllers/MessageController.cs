@@ -61,7 +61,7 @@ namespace producer.Controllers
                 var body = Encoding.UTF8.GetBytes(message);
 
                 channel.BasicPublish(exchange: "",
-                                     routingKey: "greetings",
+                                     routingKey: "TaskQueue",
                                      basicProperties: null,
                                      body: body);
             }
